@@ -1,5 +1,9 @@
 # FRAMED
 
+**DLSS 5 Neural Rendering and Frame Generation setup management by Rainborne Labs.**
+
+[**Download public alpha**](https://github.com/Rainborne-Labs/FRAMED-Releases/releases/tag/v0.19.1-alpha.14) · [Report a problem](https://github.com/Rainborne-Labs/FRAMED-Releases/issues/new/choose)
+
 FRAMED is a Windows desktop application by **Rainborne Labs**. It finds your PC games and analyses each game's own files (read-only). It installs and removes NVIDIA **Neural Rendering (NR)** and **Multi-Frame Generation (MFG)** setups through community components such as OptiScaler and ReShade add-ons. Every installation is one transaction with backups of the files it replaces, and **Settings › Recovery** can roll it back.
 
 This repository hosts the **binary releases**, release notes, checksums and issue reporting for FRAMED. The source code of FRAMED is not published.
@@ -9,14 +13,15 @@ This repository hosts the **binary releases**, release notes, checksums and issu
 ## Status
 
 - **Alpha:** behaviour, settings and supported routes can change between releases. Expect bugs.
-- **Installed is not working:** FRAMED reports "Installed" when its files are in place. It does not prove that Neural Rendering runs or that MFG presents generated frames. Check this in the game. FRAMED itself has no runtime evidence of either.
+- **Installation status:** “Installed” confirms that the required files are in place. It does not by itself confirm that Neural Rendering is running or that MFG is presenting generated frames. In-game operation must be checked separately.
 - **Translations:** English and Polish are the reference languages. The other 12 interface languages (Deutsch, Français, Italiano, Español, Português (Brasil), Русский, Українська, Türkçe, 简体中文, 繁體中文, 日本語, 한국어) are machine-assisted and have not been reviewed by native speakers. Some technical messages stay in English.
 
 ## Requirements
 
 - Windows 10 or Windows 11, 64-bit (x64).
 - About 250 MB of free space for the unpacked application, plus space for downloaded components and backups.
-- For NR and MFG: an NVIDIA GeForce RTX GPU and a current NVIDIA driver (details below).
+- The NR/MFG installation methods documented for alpha.14 require an NVIDIA GeForce RTX GPU and a compatible NVIDIA driver; see the feature-specific requirements below. These GPU restrictions concern the graphics modifications, not the Library, Settings or hardware-information features.
+- **AMD and Intel processors are not excluded.** For example, an AMD Ryzen processor paired with a supported NVIDIA RTX GPU is not excluded by these GPU requirements.
 - No .NET installation is needed. The runtime is included. No administrator rights are needed.
 
 ## Download and run
@@ -44,9 +49,19 @@ FRAMED decides the installation route from the game's own files. These are the r
 | Neural Rendering | ReShade + NR Nexus | x64 Direct3D 12 (Upscaled hook) or x64 Direct3D 11 (Present hook, experimental); a local NVIDIA NR runtime (`nvngx_dlssnr.dll` 310.9.16.0 or 310.8.2.0) that you already have. FRAMED never downloads or distributes it. |
 | Multi-Frame Generation | RenoDX MFG Unlock add-on | RTX 40 only, on the game's own DLSS Frame Generation; Direct3D 12 or Vulkan (experimental upstream). RTX 50 uses the game's own setting. FRAMED does not install MFG on RTX 20/30. |
 
-### Not supported / known limits
+### GPU compatibility in alpha.14
 
-- AMD and Intel GPUs.
+| Hardware / feature | Scope of this release |
+| --- | --- |
+| AMD or Intel CPU | The processor brand does not determine NR/MFG eligibility. Graphics-card and game requirements still apply. |
+| NVIDIA RTX GPU — Neural Rendering | See the NR methods and requirements above. A listed method is not a guarantee of in-game compatibility. |
+| NVIDIA RTX GPU — MFG | FRAMED's MFG installation method targets RTX 40. RTX 50 uses the game's own supported setting; FRAMED does not install MFG on RTX 20/30. |
+| AMD Radeon or Intel graphics — NR/MFG | No supported NR/MFG installation method is documented for these GPUs in alpha.14. This is not a claim that the FRAMED application itself cannot run on those systems. |
+
+Alternative frame-generation methods for AMD/Intel GPUs are not advertised as supported in this release. Their availability in other tools does not establish support in FRAMED.
+
+### Other limitations
+
 - 32-bit games, Direct3D 9/10 and OpenGL (no NR route).
 - Games with anti-cheat: FRAMED warns and asks for confirmation. Never use the modifications online.
 - NVIDIA driver support for NR (NGX) cannot be checked before the game runs.
@@ -79,3 +94,9 @@ FRAMED is free to download, use and test under the [FRAMED Freeware Licence](LIC
 Releases up to and including 0.19.1-alpha.11 were distributed with the MIT License. Copies of those releases keep the permissions they were distributed with.
 
 NVIDIA, GeForce RTX and DLSS are trademarks of NVIDIA Corporation. Steam, Epic Games and GOG are trademarks of their owners. FRAMED is not affiliated with or endorsed by NVIDIA, any component author or any game publisher.
+
+## Support development
+
+FRAMED's public releases are free to download. If you find it useful, you can support development through [Ko-fi](https://ko-fi.com/rainborne_labs) or [Patreon](https://www.patreon.com/c/rainborne_labs).
+
+Support is entirely optional. It helps cover development costs and does not unlock exclusive application features or priority support.
