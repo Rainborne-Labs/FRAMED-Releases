@@ -16,7 +16,7 @@ This repository hosts the **binary releases**, release notes, checksums and issu
 
 ## Screenshots
 
-Interface previews from FRAMED alpha builds. Click an image to view it at full size.
+Interface previews captured in FRAMED 0.19.1-alpha.12; the current release may differ. Click an image to view it at full size. These screenshots show the interface, not proof of in-game NR/MFG compatibility.
 
 ### Library
 
@@ -44,6 +44,20 @@ Interface previews from FRAMED alpha builds. Click an image to view it at full s
 ### Storage & Cache
 
 [![Storage and Cache settings showing disk usage and cleanup controls](assets/screenshots/storage-cache.webp)](assets/screenshots/storage-cache.webp)
+
+### Updates
+
+[![Update settings and release channel in alpha.12](assets/screenshots/updates.webp)](assets/screenshots/updates.webp)
+
+### About
+
+[![FRAMED version, project information and third-party licences](assets/screenshots/about.webp)](assets/screenshots/about.webp)
+
+### Recovery
+
+[![Recovery records with installation status and missing-folder details](assets/screenshots/recovery.webp)](assets/screenshots/recovery.webp)
+
+Recovery entries can include missing folders or records requiring review; their presence does not confirm that a game is compatible.
 
 </details>
 
