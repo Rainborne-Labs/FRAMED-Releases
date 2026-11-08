@@ -1,0 +1,21 @@
+OptiScaler.ini configuration templates embedded in Framed.Staging.dll
+
+Framed.Staging.dll contains OptiScaler.ini configuration templates. FRAMED writes them, with the setting
+values you choose, as OptiScaler.ini into a game folder when you install Neural Rendering. They are not
+FRAMED's own work and are not covered by the FRAMED Freeware Licence.
+
+Origin
+- OptiScaler NR 0.9.51 (ShyVortex/OptiScaler-DLSSNR-PreSR-Multipass, tag v0.9.51), based on OptiScaler:
+  https://github.com/ShyVortex/OptiScaler-DLSSNR-PreSR-Multipass/tree/v0.9.51
+  https://github.com/optiscaler/OptiScaler
+- Skynizz OptiScaler DLSS 5 1.3.0 (Skynizz/optiscaler-dlss5):
+  https://github.com/Skynizz/optiscaler-dlss5
+
+Authors: the OptiScaler contributors and the authors of these forks (see OptiFG-NOTICES.txt and
+ThirdPartyNotices/Skynizz/).
+
+Licence: GNU General Public License version 3 (GPL-3.0).
+
+Source: the folder ThirdPartyNotices/OptiScaler-ini/ contains the exact text of every embedded template
+(their source form), the GPL-3.0 text (COPYING.txt) and the list of changes with dates (CHANGES.txt).
+FRAMED changes setting values in these templates; it does not change their comments or other text.

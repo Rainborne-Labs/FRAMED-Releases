@@ -1,0 +1,11 @@
+FRAMED Avalonia platform badges
+
+Steam and Epic PNGs in this project are 48x48 frames converted from the existing
+Framed.Desktop/Assets/Platforms/steam.ico and epic.ico using System.Drawing.Icon.
+They are format conversions of the existing brand artwork, not new FRAMED logos.
+The GOG PNG is linked directly from that directory without conversion.
+
+See PLATFORM-NOTICES.md for original asset origins, source hashes, trademarks
+and attribution. Its "original bytes unchanged" statement describes the original
+Desktop resources; the two converted Avalonia PNGs have different file hashes.
+No artwork or launcher identity is inferred from a game title.

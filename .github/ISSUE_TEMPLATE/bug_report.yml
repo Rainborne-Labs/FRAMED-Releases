@@ -1,0 +1,79 @@
+name: Application bug
+description: FRAMED crashes or misbehaves (interface, discovery, installation records, Recovery, settings).
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For Neural Rendering or Frame Generation problems inside a game, use the **NR / FG problem** form instead.
+        **Remove personal data** (Windows user name in paths, e-mail addresses, keys) from anything you paste or attach. FRAMED sends no telemetry; only what you post here is shared.
+  - type: input
+    id: version
+    attributes:
+      label: FRAMED version
+      description: Settings › About › Version (for example 0.19.1-alpha.14 · abc1234).
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: For example Windows 11 Pro 24H2, build 26100.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Library / game discovery
+        - Game screen / analysis
+        - Install / Uninstall
+        - Recovery
+        - Settings
+        - Components / downloads
+        - Language / translation
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open …
+        2. Click …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: Include the exact message FRAMED showed, if any.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error report (optional)
+      description: |
+        Crash reports are in `%LOCALAPPDATA%\Framed\Errors`. Paste the relevant part or attach the file.
+        Replace your user name and any other personal data first.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed personal data from the text and attachments above.
+          required: true
+        - label: I am using an official release ZIP from this repository's Releases page.
+          required: true

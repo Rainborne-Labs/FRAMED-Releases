@@ -1,0 +1,42 @@
+OptiScaler.ini templates in this folder: modification notices (GPL-3.0 section 5a)
+
+These are the exact OptiScaler.ini templates embedded in Framed.Staging.dll, in plain text. They are covered
+by the GNU General Public License version 3 (COPYING.txt in this folder) and are not covered by the FRAMED
+Freeware Licence.
+
+1) OptiScaler-NR-0.9.51-Ada.ini, OptiScaler-NR-0.9.51-Ampere.ini, OptiScaler-NR-0.9.51-Turing.ini
+
+   Based on: OptiScaler.ini from OptiScaler NR 0.9.51
+   (ShyVortex/OptiScaler-DLSSNR-PreSR-Multipass, release archive OptiScaler-NR-v0.9.51.zip,
+   original file SHA-256 9be52df696301b6eaf05d52bd2e292a25c0604a875cdc8792a905c4303cc744b).
+   Modified for FRAMED; included in FRAMED since 2026-10-20.
+   Only setting values were changed; all comments and other lines are unchanged:
+
+   [FrameGen] External      false -> true
+   [FrameGen] Enabled       auto  -> false
+   [FrameGen] FGInput       auto  -> nofg
+   [FrameGen] FGOutput      auto  -> nofg
+   [DLSSG] AmpereMfgUnlock  false -> true   (Ampere and Turing templates only)
+   [DLSSG] AmpereMfgMaxFrames 3   -> 5
+   [Plugins] LoadReshade    auto  -> true
+   [DlssNr] Enabled         auto  -> true
+   [DlssNr] RunBeforeSR     auto  -> true
+   [DlssNr] Passes          auto  -> 1
+   [DlssNr] WorkingScale    auto  -> 1.0
+
+   The Ampere and Turing templates are identical.
+
+2) Skynizz-OptiScaler-DLSS5-1.3.0.ini
+
+   Based on: DLSS5-Optimised/OptiScaler.ini from Skynizz OptiScaler DLSS 5 1.3.0
+   (Skynizz/optiscaler-dlss5, release archive OptiScaler-DLSS5-1.3.0-win-x64.zip,
+   original file SHA-256 4bfe7a4ec6ed7ebdc024ab4be15f21a898d53a99249e8bd34ddadc8dfa9309b5).
+   Included in FRAMED since 2026-10-28. The content is unchanged; only the line endings were converted
+   from CRLF to LF.
+
+When you install Neural Rendering, FRAMED writes one of these templates into the game folder as
+OptiScaler.ini and sets the values you chose in FRAMED (for example the upscaler, the Neural Rendering
+options and the passes). That written file stays under GPL-3.0.
+
+Sources of the original programs, including OptiScaler.ini: see OptiFG-SOURCES.txt and
+ThirdPartyNotices/Skynizz/SOURCES.txt in the FRAMED folder.

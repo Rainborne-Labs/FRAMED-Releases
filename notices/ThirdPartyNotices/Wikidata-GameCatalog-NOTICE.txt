@@ -1,0 +1,16 @@
+Framed game identification catalogue (Framed.Discovery/game-catalog.json, embedded as "GameCatalog")
+
+Source: Wikidata, https://www.wikidata.org/
+Content: every Wikidata item that is a video game (instance of a subclass of Q7889) and has a
+Steam application ID (P1733), with its English label. Retrieved 2026-10-25 through the public
+Wikidata Query Service (no account or API key); derived by ci/build_game_catalog.py.
+Raw query result SHA-256: ea0df887e33b0047a514bc21473a9356dab72373403a8e67625896f7d739e238
+Catalogue file SHA-256:   f0c4d273b9c3b1e49a7726c8e0a4e6f00abe865a6a80efb62f9ee3d891537b4d
+
+Licence: Wikidata structured data is released under Creative Commons CC0 1.0 Universal
+(public domain dedication): https://creativecommons.org/publicdomain/zero/1.0/
+See https://www.wikidata.org/wiki/Wikidata:Licensing. No attribution is required; it is given
+here for provenance.
+
+Framed uses the catalogue only to decide whether a store identifier or an exact title names a
+game. It says nothing about NR/MFG compatibility, and it is never fetched or updated at run time.

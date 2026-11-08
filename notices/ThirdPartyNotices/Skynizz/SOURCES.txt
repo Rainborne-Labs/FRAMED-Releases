@@ -1,0 +1,14 @@
+Skynizz OptiScaler DLSS 5 v1.3.0 adapter
+Upstream: https://github.com/Skynizz/optiscaler-dlss5
+Pinned commit: fc702f8ca22f97b01bd6a02f3386bffb3484fc35
+Binary: https://github.com/Skynizz/optiscaler-dlss5/releases/download/v1.3.0/OptiScaler-DLSS5-1.3.0-win-x64.zip
+SHA256: 2f0ee88ac00848602c1422db19c29b3c992d3e0039675aa900a3cde9cf05dd8a
+Publisher's complete corresponding source (includes submodules):
+https://github.com/Skynizz/optiscaler-dlss5/releases/download/v1.3.0/OptiScaler-DLSS5-1.3.0-source.zip
+Source SHA256: 8a499353680b5b886aea31a2fdb00d4dcaff60a47f510bda85265294bdcc7eee
+GPL-3.0: see LICENSE.txt. Derived RenoDX notices: RenoDX_ATTRIBUTION.txt.
+FRAMED does not bundle the upstream DLLs or any NVIDIA NR model.
+Acquisition uses the official binary package and verifies size and SHA256.
+The source archive link/digest is publisher metadata, not an independent build attestation.
+Adapter validation is separate from model qualification. No NVIDIA model is qualified for this adapter.
+Embedded DLL ProductVersion is 10.0.0-dev (94c86d61) (20261006_135442), not 1.3.0.

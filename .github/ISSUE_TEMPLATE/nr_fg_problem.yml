@@ -1,0 +1,134 @@
+name: NR / FG problem
+description: Neural Rendering or Frame Generation does not work, or behaves wrongly, in a specific game.
+title: "[NR/FG] <game> – "
+labels: ["nr-fg"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        "Installed" in FRAMED means its files are in place; it does not prove that Neural Rendering runs or that frame generation presents generated frames. Please describe what you **see in the game**.
+        Use the modifications offline or in single-player only.
+        **Remove personal data** (Windows user name in paths, e-mail addresses, keys) from anything you paste or attach. FRAMED sends no telemetry; only what you post here is shared.
+  - type: input
+    id: version
+    attributes:
+      label: FRAMED version
+      description: Settings › About › Version (for example 0.19.1-alpha.14 · abc1234).
+    validations:
+      required: true
+  - type: input
+    id: gpu
+    attributes:
+      label: GPU
+      description: As shown in Settings › Your Rig (for example NVIDIA GeForce RTX 4070 Ti SUPER).
+    validations:
+      required: true
+  - type: input
+    id: driver
+    attributes:
+      label: NVIDIA driver version
+      description: For example 581.57 (Settings › Your Rig shows the driver).
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+    validations:
+      required: true
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      description: Title, store (Steam / Epic / GOG / other) and the game's version if you know it.
+    validations:
+      required: true
+  - type: input
+    id: exe
+    attributes:
+      label: Renderer EXE
+      description: The program FRAMED analysed and installed into (game screen › Details, or the Library menu › Choose game EXE…). File name only, for example `GTA5_Enhanced.exe`; do not paste full paths with your user name.
+    validations:
+      required: true
+  - type: dropdown
+    id: api
+    attributes:
+      label: Graphics API
+      description: As FRAMED reports it (game screen or Settings › Game diagnostics).
+      options:
+        - Direct3D 12
+        - Direct3D 11
+        - Vulkan
+        - Direct3D 9 / 10
+        - OpenGL
+        - Not established by FRAMED
+        - Confirmed by me manually
+    validations:
+      required: true
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Feature
+      options:
+        - Neural Rendering
+        - Multi-Frame Generation
+        - Both
+    validations:
+      required: true
+  - type: dropdown
+    id: method
+    attributes:
+      label: Method / route
+      description: Shown for the feature in FRAMED (Settings › Game diagnostics lists the route).
+      options:
+        - "NR: OptiScaler"
+        - "NR: ReShade + NR Nexus (Direct3D 12)"
+        - "NR: ReShade + NR Nexus (Direct3D 11 Present, experimental)"
+        - "MFG: RenoDX MFG Unlock (RTX 40)"
+        - "MFG: game's own setting (RTX 50)"
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: components
+    attributes:
+      label: Component versions
+      description: From Settings › Components or the game's Details (for example OptiScaler NR 0.9.51, ReShade 6.8.0).
+  - type: textarea
+    id: symptoms
+    attributes:
+      label: Symptoms
+      description: |
+        What you see in the game: no effect, crash at start, black screen, artefacts, performance, the game's own setting greyed out, overlay or OSD values, and so on.
+        Say how you checked (for example in-game frame-generation indicator, NVIDIA overlay, OptiScaler overlay).
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps in FRAMED and in the game
+      placeholder: |
+        1. Installed NR (route …) in FRAMED
+        2. Started the game, set …
+        3. …
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      description: |
+        FRAMED's analysis report (Settings › Game diagnostics) and component logs from the game folder, for example `OptiScaler.log` or `ReShade.log`.
+        Replace your user name and any other personal data first.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed personal data from the text and attachments above.
+          required: true
+        - label: I used the modifications offline or in single-player only.
+          required: true
+        - label: The game was closed while FRAMED installed or uninstalled.
+          required: true

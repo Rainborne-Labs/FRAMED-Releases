@@ -1,0 +1,44 @@
+FRAMED OptiFG v1 - pinned dependencies / corresponding source
+
+FRAMED downloads the unchanged publisher archive on demand; the desktop ZIP does not contain these DLLs.
+Publisher: ShyVortex/OptiScaler-DLSSNR-PreSR-Multipass, tag v0.9.51.
+https://github.com/ShyVortex/OptiScaler-DLSSNR-PreSR-Multipass/releases/tag/v0.9.51
+Archive: OptiScaler-NR-v0.9.51.zip, 178565284 bytes
+SHA256 4854f2e822e011903cfc12a041ca8476ae6ed970587aa9ff8c1fc459b428321f
+
+OptiScaler.dll (installed under the selected proxy name), 0.9.51.0 / 0.9.51-final (a4aaf07a)
+26725888 bytes, SHA256 e43932ead16045f263a620c002751d323e3c6dec2252e53f76977000b618fa50
+GPL-3.0. Unmodified binary from the author, not linked into FRAMED.
+Corresponding source and build instructions:
+https://github.com/ShyVortex/OptiScaler-DLSSNR-PreSR-Multipass/tree/v0.9.51
+https://codeload.github.com/ShyVortex/OptiScaler-DLSSNR-PreSR-Multipass/zip/refs/tags/v0.9.51
+Source ZIP SHA256 277d3f4595595bb444f5c5b032a59438486c40cbad7d8f64b94343512d879fd9
+The Git checkout with submodules is required for a complete build:
+git clone --branch v0.9.51 --recurse-submodules https://github.com/ShyVortex/OptiScaler-DLSSNR-PreSR-Multipass.git
+Use the submodule revisions recorded by that tag, not their latest branches.
+GPL text is installed as Licenses/Framed/OptiScaler-LICENSE.txt.
+Upstream credits (including FreeType/FTL and RenoDX) and source licences:
+https://github.com/ShyVortex/OptiScaler-DLSSNR-PreSR-Multipass/blob/v0.9.51/docs/CREDITS.md
+
+OptiScaler/amd_fidelityfx_loader_dx12.dll, file 2.3.0.2740 / product 2.3.0.0
+26376 bytes, SHA256 e2d85aa05a9bd9ed8b38935fdf5199372cca6f74c12015143bb6f945ee1608aa
+OptiScaler/amd_fidelityfx_framegeneration_dx12.dll, file 4.0.1.2740 / product 4.0.1.0
+40085776 bytes, SHA256 02297beedd285e822d3a64f314cf00faf378dcec0edc47ff0c4dd71b3a8c2f18
+Both are the unchanged AMD SDK binaries in the same publisher archive. Not MIT binaries:
+Licenses/Framed/OptiScaler/FidelityFX_v2_LICENSE.md permits binary redistribution with copyright,
+permission and disclaimers retained, and prohibits reverse engineering, decompilation and disassembly.
+Full original licence (61784 bytes) SHA256 f0da09d71ad5c82759a179e774535d4a829e5c96c49294167c1152402b2cb400
+is installed alongside these binaries. SDK origin: https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK
+This DLL contains multiple implementations. Its exact SDK submodule revision is
+60f4ea81909200d8542eca14dccb2628b763a9a3. The pinned FSRFG_Dx12.cpp applies the enumerated
+version ID at FGIndex; its comment identifies index 0 as non-ML. An isolated ffxQuery(GET_VERSIONS)
+against this exact DLL returned one version: index 0, name 3.1.6, ID 0x0f600000000c01006,
+both without a device and with the local D3D12 device. v1 selects [FSR] FGIndex=0.
+The INI's index description disagrees with this result; FRAMED does not rely on that description.
+Only the qualified RTX route is offered. No generated frames were measured by this API query.
+No additional XeFG, FSR4 package, NVIDIA FG runtime or unlocker is installed by OptiFG-only.
+The game supplies its own DLSS SR input/runtime. FRAMED does not redistribute it for OptiFG.
+Other backend inputs, Feeder, DX11/Vulkan and unknown GPUs are not qualified by this v1.
+When NR is already selected its existing pinned payload and licences remain unchanged.
+
+Installation is not proof of generated/presented frames. OptiFG and HUDFix are experimental.

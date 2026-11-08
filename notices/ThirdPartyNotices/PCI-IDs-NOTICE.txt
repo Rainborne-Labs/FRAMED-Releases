@@ -1,0 +1,32 @@
+NVIDIA RTX device list (Framed.Discovery.dll, embedded as "NvidiaRtxDevices")
+
+Framed.Discovery.dll contains a list of NVIDIA PCI device IDs and GPU chip names taken from pci.ids, the
+PCI ID database of the PCI ID Project (https://pci-ids.ucw.cz/), pciutils/pciids version 2026.10.20,
+SHA-256 5061033a8c13354302ef9f01e8c439fa5221655aca4132dd85866efc52412634.
+FRAMED uses only the entries of vendor 10DE whose name contains RTX.
+
+pci.ids states that it can be distributed under either the GNU General Public License (version 2 or
+higher) or the 3-clause BSD License, and that as a compilation of factual data its copyright covers only
+the aggregation and formatting and is held by Martin Mares and Albert Pool. FRAMED uses it under the
+3-clause BSD License:
+
+Copyright (c) Martin Mares and Albert Pool
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided
+that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the
+   following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and
+   the following disclaimer in the documentation and/or other materials provided with the distribution.
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or
+   promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.

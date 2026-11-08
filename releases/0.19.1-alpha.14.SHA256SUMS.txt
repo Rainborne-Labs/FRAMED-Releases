@@ -1,0 +1,2 @@
+afe436c497342222c6fd480c770e50ff1ead4a0aa01a11c9417f0b4305841a2c  FRAMED_0.19.1-alpha.14.zip
+f5d93e7f17cfe1287cbe6d9ad308ff6b62b4d32f19bb09543eb12f5a35f37fbf  FRAMED_0.19.1-alpha.14/Framed.exe
