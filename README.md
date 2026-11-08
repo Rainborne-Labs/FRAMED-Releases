@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/framed-logo.webp" alt="FRAMED — Rainborne Labs" width="260">
+</p>
+
 # FRAMED
 
 **DLSS 5 Neural Rendering and Frame Generation setup management by Rainborne Labs.**
@@ -9,6 +13,39 @@ FRAMED is a Windows desktop application by **Rainborne Labs**. It finds your PC 
 This repository hosts the **binary releases**, release notes, checksums and issue reporting for FRAMED. The source code of FRAMED is not published.
 
 > **Experimental alpha.** FRAMED is alpha software. It changes files in game folders when you ask it to. Use the modifications offline or in single-player only. Online services and anti-cheat software can detect modified game files and penalise accounts, including permanent bans.
+
+## Screenshots
+
+Interface previews from FRAMED alpha builds. Click an image to view it at full size.
+
+### Library
+
+[![FRAMED Library with game covers and a custom wallpaper](assets/screenshots/library.webp)](assets/screenshots/library.webp)
+
+| Appearance | Your Rig |
+| --- | --- |
+| [![Appearance: Light/Dark, wallpaper, transparency and blur](assets/screenshots/appearance.webp)](assets/screenshots/appearance.webp) | [![Your Rig: detected hardware, storage and displays](assets/screenshots/your-rig.webp)](assets/screenshots/your-rig.webp) |
+
+<details>
+<summary>More settings screenshots</summary>
+
+### Interface language
+
+[![Language selector showing the available interface languages](assets/screenshots/languages.webp)](assets/screenshots/languages.webp)
+
+### General
+
+[![General settings for window behaviour, session and animations](assets/screenshots/general.webp)](assets/screenshots/general.webp)
+
+### Library & Discovery
+
+[![Library and Discovery settings for game detection and cover art](assets/screenshots/library-discovery.webp)](assets/screenshots/library-discovery.webp)
+
+### Storage & Cache
+
+[![Storage and Cache settings showing disk usage and cleanup controls](assets/screenshots/storage-cache.webp)](assets/screenshots/storage-cache.webp)
+
+</details>
 
 ## Status
 
